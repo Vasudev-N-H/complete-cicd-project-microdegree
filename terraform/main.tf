@@ -1,22 +1,22 @@
 provider "aws" {
-    region = "us-east-1"
+    region = "us-east-2"
 }
 
 resource "aws_instance" "instance-1" {
-  ami           = "ami-0fff1b9a61dec8a5f"
-  instance_type = "t2.micro"
+  ami           = "ami-03ea746da1a2e36e7"
+  instance_type = "t3.micro"
   security_groups = ["default"]
-  key_name = "project"
+  key_name = "Ohio-Key"
   tags ={
     Name = "grafana-server"
   }
 }
 
 resource "aws_instance" "instance-2" {
-  ami           = "ami-0fff1b9a61dec8a5f"
-  instance_type = "t2.micro"
+  ami           = "ami-03ea746da1a2e36e7"
+  instance_type = "t3.micro"
   security_groups = ["default"]
-  key_name = "project"
+  key_name = "Ohio-Key"
   tags ={
     Name = "node-expo"
   }
